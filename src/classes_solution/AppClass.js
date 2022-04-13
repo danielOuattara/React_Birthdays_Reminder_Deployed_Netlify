@@ -38,7 +38,7 @@ export default class App extends Component {
     return (
       <main>
         <section className="container">
-          <h3>{this.state.people.length} birthdays today</h3>{" "}
+        {this.state.people.length === 1 ? <h3> {this.state.people.length} birthday today</h3> : <h3> {this.state.people.length} birthdays today</h3> }
           <span>class component</span>
           <List
             people={this.state.people}

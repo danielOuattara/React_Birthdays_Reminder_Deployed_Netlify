@@ -12,7 +12,7 @@ class ContainerClassRedux extends Component {
     return (
       <main>
         <section className="container">
-          <h3>{this.props.people.length} birthdays today</h3>{" "}
+          {this.props.people.length === 1 ? <h3> {this.props.people.length} birthday today</h3> : <h3> {this.props.people.length} birthdays today</h3> }
           <span>class component + redux </span>
           <List />
           {this.props.people.length !== 0 && (

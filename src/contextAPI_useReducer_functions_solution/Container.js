@@ -16,7 +16,7 @@ function Container() {
   return (
     <main>
       <section className="container">
-        <h3>{people.length} birthdays today</h3>
+      {people.length === 1 ? <h3> {people.length} birthday today</h3> : <h3> {people.length} birthdays today</h3> }
         <span>useReducer</span>
         <ListContextAPI />
         {people.length !== 0 && (
