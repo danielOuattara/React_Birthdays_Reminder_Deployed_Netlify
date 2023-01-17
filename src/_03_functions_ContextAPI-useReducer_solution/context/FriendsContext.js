@@ -20,13 +20,11 @@ function FriendsContextProvider(props) {
   };
 
   return (
-    <div>
-      <FriendsContext.Provider
-        value={{ people, handleRemoveOnePerson, handleRefresh, setPeople }}
-      >
-        {props.children}
-      </FriendsContext.Provider>
-    </div>
+    <FriendsContext.Provider
+      value={{ people, handleRemoveOnePerson, handleRefresh, setPeople }}
+    >
+      {props.children}
+    </FriendsContext.Provider>
   );
 }
 

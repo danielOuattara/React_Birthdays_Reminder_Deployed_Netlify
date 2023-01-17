@@ -25,7 +25,9 @@ function AppFunction() {
       <section className="container">
         <span>functionnal component</span>
         {people.length > 1 && <h3>{people.length} birthdays today</h3>}
-        {people.length === 1 && <h3>{people.length} birthday today</h3>}
+        {(people.length === 1 || people.length === 0) && (
+          <h3>{people.length} birthday today</h3>
+        )}
         <List people={people} handleRemoveOnePerson={handleRemoveOnePerson} />
         {people.length !== 0 && (
           <button onClick={handleEmpty}> clear all</button>

@@ -52,7 +52,8 @@ export default class App extends Component {
           {this.state.people.length > 1 && (
             <h3>{this.state.people.length} birthdays today</h3>
           )}
-          {this.state.people.length === 1 && (
+          {(this.state.people.length === 1 ||
+            this.state.people.length === 0) && (
             <h3>{this.state.people.length} birthday today</h3>
           )}
           <List

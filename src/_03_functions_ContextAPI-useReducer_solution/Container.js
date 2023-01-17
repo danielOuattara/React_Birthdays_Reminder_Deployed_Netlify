@@ -12,7 +12,9 @@ function Container() {
             <section className="container">
               <span> function component: contextAPI + useContext</span>
               {people.length > 1 && <h3>{people.length} birthdays today</h3>}
-              {people.length === 1 && <h3>{people.length} birthday today</h3>}
+              {(people.length === 1 || people.length === 0) && (
+                <h3>{people.length} birthday today</h3>
+              )}{" "}
               <ListContextAPI />
               {people.length !== 0 && (
                 <button onClick={() => setPeople([])}> Clear all</button>
