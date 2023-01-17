@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import ListContextAPI from "./ListFunctionContextAPI";
 import { FriendsContext } from "./context/FriendsContext";
+import data from "./../data";
 
 function Container() {
   const { people, dispatch } = useContext(FriendsContext);
@@ -10,29 +11,23 @@ function Container() {
   };
 
   const handleRefresh = () => {
-    window.location.reload(false);
+    dispatch({ type: "RESET_ALL_FRIENDS", payload: data });
   };
 
   return (
     <main>
       <section className="container">
-        <h3>{people.length} birthdays today</h3>
-        <span>useReducer</span>
+        <span> functionnal component + useReducer</span>
+        {people.length > 1 && <h3>{people.length} birthdays today</h3>}
+        {(people.length === 1 || people.length === 0) && (
+          <h3>{people.length} birthday today</h3>
+        )}
         <ListContextAPI />
         {people.length !== 0 && (
-          <button
-            onClick={() => handleRemoveAllFriends()}
-            style={{ marginTop: "50px" }}
-          >
-            {" "}
-            Clear all
-          </button>
+          <button onClick={() => handleRemoveAllFriends()}> Clear all</button>
         )}
         {people.length === 0 && (
-          <button onClick={() => handleRefresh()} style={{ marginTop: "50px" }}>
-            {" "}
-            Refresh
-          </button>
+          <button onClick={handleRefresh}> Refresh</button>
         )}
       </section>
     </main>
