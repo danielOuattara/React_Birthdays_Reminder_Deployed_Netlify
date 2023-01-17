@@ -13,7 +13,7 @@ John Smilga find inspiration from the site linked next:
 
 ## What
 
-In this work I greatly increased the base project by converting it to more advanced React.js technics:
+In this work I greatly increased the base project by converting it by using more advanced React.js technics:
 
 - functionnal component (base project)
 - class component
@@ -41,5 +41,5 @@ This work is deployed online :
 
 ## More Infos
 
-The same project exist in Vue.js 3
+The same project exists in Vue.js 3 (links soon)
 
