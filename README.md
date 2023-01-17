@@ -29,6 +29,9 @@ This work is deployed online :
 
 [https://daniel-react-birthdays-reminder.netlify.app/](https://daniel-react-birthdays-reminder.netlify.app/)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/74142041-58bf-400e-ad67-1c378f6bdf61/deploy-status)](https://app.netlify.com/sites/daniel-react-birthdays-reminder/deploys)
+
+
 ## run Project Locally
 
 - clone the project
@@ -39,3 +42,4 @@ This work is deployed online :
 ## More Infos
 
 The same project exist in Vue.js 3
+
